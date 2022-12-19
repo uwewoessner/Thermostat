@@ -1,0 +1,15 @@
+
+ESP32 Relais board
+https://www.pcbway.com/project/shareproject/8_relay_IOT_board_with_ESP32_9ed49143.html
+
+
+Joystick board
+https://www.pcbway.com/project/shareproject/buttonBoard_V1_2___A_multipurpose_ESP32_powered_IOT_button_PCB.html
+
+https://oshwlab.com/igor.silenock/esp8266-tft_copy
+
+https://www.pcbway.com/project/shareproject/OpenFlex_Industrial_IoT_Controller.html
+
+
+viele Kicad files findet man hier:
+https://componentsearchengine.com/

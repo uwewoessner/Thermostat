@@ -1,0 +1,872 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 6400 1850 2    50   Input ~ 0
+USART_TX
+Text GLabel 6350 2050 2    50   Input ~ 0
+USART_RX
+$Comp
+L power:GND #PWR0101
+U 1 1 61F6D36B
+P 4700 4650
+F 0 "#PWR0101" H 4700 4400 50  0001 C CNN
+F 1 "GND" H 4705 4477 50  0000 C CNN
+F 2 "" H 4700 4650 50  0001 C CNN
+F 3 "" H 4700 4650 50  0001 C CNN
+	1    4700 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 61F6DEC9
+P 4700 1000
+F 0 "#PWR0102" H 4700 850 50  0001 C CNN
+F 1 "+3.3V" H 4715 1173 50  0000 C CNN
+F 2 "" H 4700 1000 50  0001 C CNN
+F 3 "" H 4700 1000 50  0001 C CNN
+	1    4700 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L mypower:TENSTAR_3.3 U2
+U 1 1 61F71185
+P 8500 2750
+F 0 "U2" H 8828 2671 50  0000 L CNN
+F 1 "TENSTAR_3.3" H 8828 2580 50  0000 L CNN
+F 2 "Power:TENSTAR_ROBOT_POWERSUPLY" H 8500 2750 50  0001 C CNN
+F 3 "" H 8500 2750 50  0001 C CNN
+	1    8500 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 61F71A1C
+P 8700 3500
+F 0 "#PWR0103" H 8700 3250 50  0001 C CNN
+F 1 "GND" H 8705 3327 50  0000 C CNN
+F 2 "" H 8700 3500 50  0001 C CNN
+F 3 "" H 8700 3500 50  0001 C CNN
+	1    8700 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0104
+U 1 1 61F7271F
+P 8300 3500
+F 0 "#PWR0104" H 8300 3350 50  0001 C CNN
+F 1 "+3.3V" H 8315 3673 50  0000 C CNN
+F 2 "" H 8300 3500 50  0001 C CNN
+F 3 "" H 8300 3500 50  0001 C CNN
+	1    8300 3500
+	-1   0    0    1   
+$EndComp
+Text GLabel 1750 1050 3    50   Input ~ 0
+SDA
+Text GLabel 1650 1050 3    50   Input ~ 0
+SCL
+$Comp
+L power:GND #PWR0105
+U 1 1 61F79E4B
+P 1450 1050
+F 0 "#PWR0105" H 1450 800 50  0001 C CNN
+F 1 "GND" H 1455 877 50  0000 C CNN
+F 2 "" H 1450 1050 50  0001 C CNN
+F 3 "" H 1450 1050 50  0001 C CNN
+	1    1450 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0106
+U 1 1 61F7AB02
+P 1550 1300
+F 0 "#PWR0106" H 1550 1150 50  0001 C CNN
+F 1 "+3.3V" H 1565 1473 50  0000 C CNN
+F 2 "" H 1550 1300 50  0001 C CNN
+F 3 "" H 1550 1300 50  0001 C CNN
+	1    1550 1300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1550 1300 1550 1050
+Wire Wire Line
+	4700 1550 4700 1000
+Wire Wire Line
+	4700 4350 4700 4650
+Text GLabel 5300 3150 2    50   Input ~ 0
+SDA
+Text GLabel 5300 3250 2    50   Input ~ 0
+SCL
+$Comp
+L conn:Screw_Terminal_01x05 J1
+U 1 1 61F7C7CA
+P 7650 1400
+F 0 "J1" V 7614 1112 50  0000 R CNN
+F 1 "Screw_Terminal_01x04" V 7523 1112 50  0000 R CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_5-G-3.81_1x05_P3.81mm_Vertical" H 7650 1400 50  0001 C CNN
+F 3 "~" H 7650 1400 50  0001 C CNN
+	1    7650 1400
+	0    -1   -1   0   
+$EndComp
+Text GLabel 8400 2250 1    50   Input ~ 0
+AC_N
+Text GLabel 8600 2250 1    50   Input ~ 0
+AC_L
+Text GLabel 7550 1600 3    50   Input ~ 0
+AC_N
+Text GLabel 7450 1600 3    50   Input ~ 0
+AC_L
+Text GLabel 7750 1600 3    50   Input ~ 0
+Load_N
+Text GLabel 7150 1550 3    50   Input ~ 0
+Load_L
+$Comp
+L Device:Rotary_Encoder_Switch SW1
+U 1 1 620010C5
+P 7050 3000
+F 0 "SW1" H 7050 3367 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 7050 3276 50  0000 C CNN
+F 2 "Thermostat_SSR:RotaryEncoder_pec11r-4215k" H 6900 3160 50  0001 C CNN
+F 3 "~" H 7050 3260 50  0001 C CNN
+	1    7050 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 62001B63
+P 7550 2900
+F 0 "#PWR0107" H 7550 2650 50  0001 C CNN
+F 1 "GND" V 7555 2772 50  0000 R CNN
+F 2 "" H 7550 2900 50  0001 C CNN
+F 3 "" H 7550 2900 50  0001 C CNN
+	1    7550 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7350 2900 7550 2900
+Text GLabel 7350 3100 2    50   Input ~ 0
+RotarySwitch
+Text GLabel 5300 2850 2    50   Input ~ 0
+RotarySwitch
+Text GLabel 5300 3050 2    50   Input ~ 0
+ROTA
+Text GLabel 5300 2950 2    50   Input ~ 0
+ROTB
+Text GLabel 6750 2900 0    50   Input ~ 0
+ROTA
+Text GLabel 6750 3100 0    50   Input ~ 0
+ROTB
+$Comp
+L power:GND #PWR0108
+U 1 1 62003234
+P 6350 3000
+F 0 "#PWR0108" H 6350 2750 50  0001 C CNN
+F 1 "GND" V 6355 2872 50  0000 R CNN
+F 2 "" H 6350 3000 50  0001 C CNN
+F 3 "" H 6350 3000 50  0001 C CNN
+	1    6350 3000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6350 3000 6750 3000
+Text GLabel 5300 2750 2    50   Input ~ 0
+SSR
+$Comp
+L power:GND #PWR0109
+U 1 1 620058A1
+P 4700 5900
+F 0 "#PWR0109" H 4700 5650 50  0001 C CNN
+F 1 "GND" H 4705 5727 50  0000 C CNN
+F 2 "" H 4700 5900 50  0001 C CNN
+F 3 "" H 4700 5900 50  0001 C CNN
+	1    4700 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 5800 4700 5900
+Text GLabel 3200 7100 3    50   Input ~ 0
+UP
+Text GLabel 1750 7100 3    50   Input ~ 0
+DOWN
+Text GLabel 4700 6300 0    50   Input ~ 0
+RESET
+Text GLabel 6650 6300 0    50   Input ~ 0
+BOOT
+Text GLabel 3500 1750 0    50   Input ~ 0
+RESET
+$Comp
+L Device:R R1
+U 1 1 6200A9BD
+P 3600 1500
+F 0 "R1" H 3670 1546 50  0000 L CNN
+F 1 "R10k" H 3670 1455 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 3530 1500 50  0001 C CNN
+F 3 "~" H 3600 1500 50  0001 C CNN
+F 4 "C17414" H 3600 1500 50  0001 C CNN "LCSC"
+	1    3600 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 6200AC3C
+P 3600 2000
+F 0 "C3" H 3715 2046 50  0000 L CNN
+F 1 "C10uf" H 3715 1955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 3638 1850 50  0001 C CNN
+F 3 "~" H 3600 2000 50  0001 C CNN
+F 4 "C13585" H 3600 2000 50  0001 C CNN "LCSC"
+	1    3600 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 6200B255
+P 5950 1150
+F 0 "C2" H 6065 1196 50  0000 L CNN
+F 1 "C100nf" H 6065 1105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5988 1000 50  0001 C CNN
+F 3 "~" H 5950 1150 50  0001 C CNN
+F 4 "C49678" H 5950 1150 50  0001 C CNN "LCSC"
+	1    5950 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 1650 3600 1750
+Connection ~ 3600 1750
+Wire Wire Line
+	3600 1750 3500 1750
+Wire Wire Line
+	3600 1750 3600 1850
+$Comp
+L power:GND #PWR0110
+U 1 1 6200BEDE
+P 3600 2150
+F 0 "#PWR0110" H 3600 1900 50  0001 C CNN
+F 1 "GND" H 3605 1977 50  0000 C CNN
+F 2 "" H 3600 2150 50  0001 C CNN
+F 3 "" H 3600 2150 50  0001 C CNN
+	1    3600 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 6200C17D
+P 5950 1300
+F 0 "#PWR0111" H 5950 1050 50  0001 C CNN
+F 1 "GND" H 5955 1127 50  0000 C CNN
+F 2 "" H 5950 1300 50  0001 C CNN
+F 3 "" H 5950 1300 50  0001 C CNN
+	1    5950 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0112
+U 1 1 6200C453
+P 3600 1350
+F 0 "#PWR0112" H 3600 1200 50  0001 C CNN
+F 1 "+3.3V" H 3615 1523 50  0000 C CNN
+F 2 "" H 3600 1350 50  0001 C CNN
+F 3 "" H 3600 1350 50  0001 C CNN
+	1    3600 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6200DB47
+P 6250 1850
+F 0 "R2" V 6043 1850 50  0000 C CNN
+F 1 "R470" V 6134 1850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6180 1850 50  0001 C CNN
+F 3 "~" H 6250 1850 50  0001 C CNN
+F 4 "C17710" H 6250 1850 50  0001 C CNN "LCSC"
+	1    6250 1850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 6200E374
+P 6000 2050
+F 0 "R3" V 5793 2050 50  0000 C CNN
+F 1 "R470" V 5884 2050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5930 2050 50  0001 C CNN
+F 3 "~" H 6000 2050 50  0001 C CNN
+F 4 "C17710" H 6000 2050 50  0001 C CNN "LCSC"
+	1    6000 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L conn:Conn_01x06_Female J3
+U 1 1 6200F70B
+P 2250 2250
+F 0 "J3" V 2096 2398 50  0000 L CNN
+F 1 "Conn_01x04_Female_Prog" V 2187 2398 50  0000 L CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 2250 2250 50  0001 C CNN
+F 3 "~" H 2250 2250 50  0001 C CNN
+	1    2250 2250
+	0    1    1    0   
+$EndComp
+Text GLabel 2250 2050 1    50   Input ~ 0
+USART_RX
+Text GLabel 2350 2050 1    50   Input ~ 0
+USART_TX
+Text GLabel 5650 1750 2    50   Input ~ 0
+BOOT
+Wire Wire Line
+	5650 1750 5300 1750
+Text GLabel 2450 2050 1    50   Input ~ 0
+DTR
+Text GLabel 2050 2050 1    50   Input ~ 0
+RTS
+$Comp
+L Transistor_BJT:BC847 Q2
+U 1 1 6201270F
+P 2450 3200
+F 0 "Q2" H 2641 3246 50  0000 L CNN
+F 1 "BC847" H 2641 3155 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2650 3125 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 2450 3200 50  0001 L CNN
+F 4 "C2146" H 2450 3200 50  0001 C CNN "LCSC"
+	1    2450 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC847 Q1
+U 1 1 62012EF0
+P 2450 4150
+F 0 "Q1" H 2641 4196 50  0000 L CNN
+F 1 "BC847" H 2641 4105 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2650 4075 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 2450 4150 50  0001 L CNN
+F 4 "C2146" H 2450 4150 50  0001 C CNN "LCSC"
+	1    2450 4150
+	1    0    0    -1  
+$EndComp
+Text GLabel 2550 3000 1    50   Input ~ 0
+BOOT
+Text GLabel 2550 3400 3    50   Input ~ 0
+DTR
+Text GLabel 1950 3200 0    50   Input ~ 0
+RTS
+Text GLabel 1950 4150 0    50   Input ~ 0
+DTR
+Text GLabel 2550 3950 1    50   Input ~ 0
+RESET
+$Comp
+L RF_Module:ESP32-WROOM-32D U1
+U 1 1 61F6C243
+P 4700 2950
+F 0 "U1" H 4700 4531 50  0000 C CNN
+F 1 "ESP32-WROOM-32D" H 4700 4440 50  0000 C CNN
+F 2 "RF_Module:ESP32-WROOM-32" H 4700 1450 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32d_esp32-wroom-32u_datasheet_en.pdf" H 4400 3000 50  0001 C CNN
+F 4 "C473012" H 4700 2950 50  0001 C CNN "LCSC"
+	1    4700 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 62014A42
+P 2100 3200
+F 0 "R6" V 1893 3200 50  0000 C CNN
+F 1 "R10k" V 1984 3200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2030 3200 50  0001 C CNN
+F 3 "~" H 2100 3200 50  0001 C CNN
+F 4 "C17414" H 2100 3200 50  0001 C CNN "LCSC"
+	1    2100 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 6201563E
+P 2100 4150
+F 0 "R7" V 1893 4150 50  0000 C CNN
+F 1 "R10k" V 1984 4150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2030 4150 50  0001 C CNN
+F 3 "~" H 2100 4150 50  0001 C CNN
+F 4 "C17414" H 2100 4150 50  0001 C CNN "LCSC"
+	1    2100 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 62018C50
+P 6800 6300
+F 0 "R4" V 6593 6300 50  0000 C CNN
+F 1 "R470" V 6684 6300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6730 6300 50  0001 C CNN
+F 3 "~" H 6800 6300 50  0001 C CNN
+F 4 "C17710" H 6800 6300 50  0001 C CNN "LCSC"
+	1    6800 6300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 6201B3B5
+P 6350 1150
+F 0 "C1" H 6465 1196 50  0000 L CNN
+F 1 "C10uf" H 6465 1105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 6388 1000 50  0001 C CNN
+F 3 "~" H 6350 1150 50  0001 C CNN
+F 4 "C13585" H 6350 1150 50  0001 C CNN "LCSC"
+	1    6350 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 1000 6350 1000
+Wire Wire Line
+	5950 1300 6350 1300
+Connection ~ 5950 1300
+$Comp
+L power:+3.3V #PWR0113
+U 1 1 6201C1EF
+P 5950 1000
+F 0 "#PWR0113" H 5950 850 50  0001 C CNN
+F 1 "+3.3V" H 5965 1173 50  0000 C CNN
+F 2 "" H 5950 1000 50  0001 C CNN
+F 3 "" H 5950 1000 50  0001 C CNN
+	1    5950 1000
+	1    0    0    -1  
+$EndComp
+Connection ~ 5950 1000
+$Comp
+L Device:R R5
+U 1 1 6201ECB5
+P 4850 6300
+F 0 "R5" V 4643 6300 50  0000 C CNN
+F 1 "R470" V 4734 6300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 4780 6300 50  0001 C CNN
+F 3 "~" H 4850 6300 50  0001 C CNN
+F 4 "C17710" H 4850 6300 50  0001 C CNN "LCSC"
+	1    4850 6300
+	0    1    1    0   
+$EndComp
+Text GLabel 2550 4350 3    50   Input ~ 0
+RTS
+$Comp
+L Device:R R8
+U 1 1 6202B0CD
+P 6900 4200
+F 0 "R8" V 6693 4200 50  0000 C CNN
+F 1 "R220" V 6784 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6830 4200 50  0001 C CNN
+F 3 "~" H 6900 4200 50  0001 C CNN
+F 4 "C17557" H 6900 4200 50  0001 C CNN "LCSC"
+	1    6900 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0114
+U 1 1 6202C43C
+P 6550 4200
+F 0 "#PWR0114" H 6550 4050 50  0001 C CNN
+F 1 "+3.3V" H 6565 4373 50  0000 C CNN
+F 2 "" H 6550 4200 50  0001 C CNN
+F 3 "" H 6550 4200 50  0001 C CNN
+	1    6550 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 4200 6750 4200
+Text GLabel 5300 3350 2    50   Input ~ 0
+LEDDown
+Text GLabel 7050 4300 0    50   Input ~ 0
+SSR
+Text GLabel 8550 4200 2    50   Input ~ 0
+Load_N
+Text GLabel 8550 4400 2    50   Input ~ 0
+Load_L
+Text GLabel 5300 2450 2    50   Input ~ 0
+DOWN
+Text GLabel 5300 2550 2    50   Input ~ 0
+UP
+NoConn ~ 4100 3450
+NoConn ~ 4100 3350
+NoConn ~ 4100 3250
+NoConn ~ 4100 3150
+NoConn ~ 4100 3050
+NoConn ~ 4100 2950
+NoConn ~ 2500 -850
+$Comp
+L power:GND #PWR0115
+U 1 1 62067C1F
+P 1950 2050
+F 0 "#PWR0115" H 1950 1800 50  0001 C CNN
+F 1 "GND" H 1955 1877 50  0000 C CNN
+F 2 "" H 1950 2050 50  0001 C CNN
+F 3 "" H 1950 2050 50  0001 C CNN
+	1    1950 2050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0116
+U 1 1 62068A78
+P 2150 2050
+F 0 "#PWR0116" H 2150 1900 50  0001 C CNN
+F 1 "+3.3V" H 2165 2223 50  0000 C CNN
+F 2 "" H 2150 2050 50  0001 C CNN
+F 3 "" H 2150 2050 50  0001 C CNN
+	1    2150 2050
+	1    0    0    -1  
+$EndComp
+Text GLabel 5300 1950 2    50   Input ~ 0
+GPIO2
+Text GLabel 5300 2150 2    50   Input ~ 0
+GPIO4
+Text GLabel 5300 2250 2    50   Input ~ 0
+DHT
+Text GLabel 5300 2350 2    50   Input ~ 0
+GPIO12
+Text GLabel 5300 2650 2    50   Input ~ 0
+GPIO15
+Text GLabel 5300 3450 2    50   Input ~ 0
+LEDUP
+Text GLabel 5300 3550 2    50   Input ~ 0
+GPIO26
+Text GLabel 5300 3650 2    50   Input ~ 0
+GPIO27
+Text GLabel 5300 3750 2    50   Input ~ 0
+GPIO32
+Text GLabel 5300 3850 2    50   Input ~ 0
+GPIO33
+Text GLabel 5300 3950 2    50   Input ~ 0
+GPIO34
+Text GLabel 5300 4050 2    50   Input ~ 0
+GPIO35
+Text GLabel 4100 1950 0    50   Input ~ 0
+GPIO36
+Text GLabel 4100 2050 0    50   Input ~ 0
+GPIO39
+Wire Wire Line
+	6100 1850 5300 1850
+Wire Wire Line
+	6350 2050 6150 2050
+Wire Wire Line
+	5850 2050 5300 2050
+Text GLabel 3250 5050 3    50   Input ~ 0
+GPIO2
+Text GLabel 3150 5050 3    50   Input ~ 0
+GPIO4
+Text GLabel 3050 5050 3    50   Input ~ 0
+DHT
+Text GLabel 3400 3500 0    50   Input ~ 0
+GPIO12
+Text GLabel 3350 5050 3    50   Input ~ 0
+GPIO15
+Text GLabel 3400 3300 0    50   Input ~ 0
+GPIO25
+$Comp
+L power:GND #PWR0117
+U 1 1 6207D964
+P 3400 2400
+F 0 "#PWR0117" H 3400 2150 50  0001 C CNN
+F 1 "GND" V 3405 2272 50  0000 R CNN
+F 2 "" H 3400 2400 50  0001 C CNN
+F 3 "" H 3400 2400 50  0001 C CNN
+	1    3400 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0118
+U 1 1 6207E699
+P 3400 2300
+F 0 "#PWR0118" H 3400 2150 50  0001 C CNN
+F 1 "+3.3V" V 3415 2428 50  0000 L CNN
+F 2 "" H 3400 2300 50  0001 C CNN
+F 3 "" H 3400 2300 50  0001 C CNN
+	1    3400 2300
+	0    -1   -1   0   
+$EndComp
+Text GLabel 3400 3200 0    50   Input ~ 0
+GPIO26
+Text GLabel 3400 3100 0    50   Input ~ 0
+GPIO27
+Text GLabel 3550 5050 3    50   Input ~ 0
+GPIO32
+Text GLabel 3650 5050 3    50   Input ~ 0
+GPIO33
+Text GLabel 4350 5250 3    50   Input ~ 0
+GPIO34
+Text GLabel 3450 5050 3    50   Input ~ 0
+GPIO35
+Text GLabel 4550 5250 3    50   Input ~ 0
+GPIO36
+Text GLabel 4450 5250 3    50   Input ~ 0
+GPIO39
+Wire Wire Line
+	3600 1750 4100 1750
+$Comp
+L TS-1187A-B-A-B:TS-1187A-B-A-B S4
+U 1 1 620FAFEC
+P 5000 6200
+F 0 "S4" H 5600 6465 50  0000 C CNN
+F 1 "TS-1187A-B-A-B" H 5600 6374 50  0000 C CNN
+F 2 "TS1187ABAB" H 6050 6300 50  0001 L CNN
+F 3 "http://www.helloxkb.com/public/images/pdf/TS-1187A-B-A-B-.pdf" H 6050 6200 50  0001 L CNN
+F 4 "Tactile Switches SPST 5.10mm x 5.10mm 0.40mm 50mA @ 12VDC SMD RoHS" H 6050 6100 50  0001 L CNN "Description"
+F 5 "4.05" H 6050 6000 50  0001 L CNN "Height"
+F 6 "XKB Connectivity" H 6050 5900 50  0001 L CNN "Manufacturer_Name"
+F 7 "TS-1187A-B-A-B" H 6050 5800 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "" H 6050 5700 50  0001 L CNN "Mouser Part Number"
+F 9 "" H 6050 5600 50  0001 L CNN "Mouser Price/Stock"
+F 10 "" H 6050 5500 50  0001 L CNN "Arrow Part Number"
+F 11 "" H 6050 5400 50  0001 L CNN "Arrow Price/Stock"
+F 12 "C318884" H 5000 6200 50  0001 C CNN "LCSC"
+	1    5000 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 5800 5000 5800
+Wire Wire Line
+	5000 5800 5000 6200
+Connection ~ 5000 5800
+$Comp
+L TS-1187A-B-A-B:TS-1187A-B-A-B S5
+U 1 1 62102DD0
+P 6950 6200
+F 0 "S5" H 7550 6465 50  0000 C CNN
+F 1 "TS-1187A-B-A-B" H 7550 6374 50  0000 C CNN
+F 2 "TS1187ABAB" H 8000 6300 50  0001 L CNN
+F 3 "http://www.helloxkb.com/public/images/pdf/TS-1187A-B-A-B-.pdf" H 8000 6200 50  0001 L CNN
+F 4 "Tactile Switches SPST 5.10mm x 5.10mm 0.40mm 50mA @ 12VDC SMD RoHS" H 8000 6100 50  0001 L CNN "Description"
+F 5 "4.05" H 8000 6000 50  0001 L CNN "Height"
+F 6 "XKB Connectivity" H 8000 5900 50  0001 L CNN "Manufacturer_Name"
+F 7 "TS-1187A-B-A-B" H 8000 5800 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "" H 8000 5700 50  0001 L CNN "Mouser Part Number"
+F 9 "" H 8000 5600 50  0001 L CNN "Mouser Price/Stock"
+F 10 "" H 8000 5500 50  0001 L CNN "Arrow Part Number"
+F 11 "" H 8000 5400 50  0001 L CNN "Arrow Price/Stock"
+F 12 "C318884" H 6950 6200 50  0001 C CNN "LCSC"
+	1    6950 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 6200 6950 5800
+Wire Wire Line
+	5000 5800 6950 5800
+$Comp
+L CPC1972GSTR:CPC1972GSTR IC3
+U 1 1 621084DD
+P 7050 4200
+F 0 "IC3" H 7800 4465 50  0000 C CNN
+F 1 "CPC1972GSTR" H 7800 4374 50  0000 C CNN
+F 2 "SOP254P952X470-6N" H 8400 4300 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/CPC1972GSTR.pdf" H 8400 4200 50  0001 L CNN
+F 4 "Triac & SCR Output Optocouplers 250V Single Pole SIP Power Relay" H 8400 4100 50  0001 L CNN "Description"
+F 5 "4.699" H 8400 4000 50  0001 L CNN "Height"
+F 6 "LITTELFUSE" H 8400 3900 50  0001 L CNN "Manufacturer_Name"
+F 7 "CPC1972GSTR" H 8400 3800 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "849-CPC1972GSTR" H 8400 3700 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/IXYS-Integrated-Circuits/CPC1972GSTR?qs=OpMkDkHXivPq5sDud6XK4g%3D%3D" H 8400 3600 50  0001 L CNN "Mouser Price/Stock"
+F 10 "CPC1972GSTR" H 8400 3500 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/cpc1972gstr/ixys" H 8400 3400 50  0001 L CNN "Arrow Price/Stock"
+F 12 "C150430" H 7050 4200 50  0001 C CNN "LCSC"
+	1    7050 4200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 8550 4300
+NoConn ~ 7050 4400
+NoConn ~ 6200 6200
+NoConn ~ 6200 6300
+NoConn ~ 8150 6200
+NoConn ~ 8150 6300
+$Comp
+L K6-1212A-03:K6-1212A-03 S1
+U 1 1 6211AD27
+P 2900 6500
+F 0 "S1" H 3744 6596 50  0000 L CNN
+F 1 "K6-1212A-03" H 3744 6505 50  0000 L CNN
+F 2 "K61212A03" H 3550 7000 50  0001 L CNN
+F 3 "https://lcsc.com/product-detail/Tactile-Switches_Korean-Hroparts-Elec-K6-1212A-03_C124939.html" H 3550 6900 50  0001 L CNN
+F 4 "Tactile Switches SPST-NO 12.00mm x 12.00mm 7.30mm 50mA @ 12VDC Bagged RoHS" H 3550 6800 50  0001 L CNN "Description"
+F 5 "7.5" H 3550 6700 50  0001 L CNN "Height"
+F 6 "Korean Hroparts Elec" H 3550 6600 50  0001 L CNN "Manufacturer_Name"
+F 7 "K6-1212A-03" H 3550 6500 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "" H 3550 6400 50  0001 L CNN "Mouser Part Number"
+F 9 "" H 3550 6300 50  0001 L CNN "Mouser Price/Stock"
+F 10 "" H 3550 6200 50  0001 L CNN "Arrow Part Number"
+F 11 "" H 3550 6100 50  0001 L CNN "Arrow Price/Stock"
+	1    2900 6500
+	1    0    0    -1  
+$EndComp
+Text GLabel 2250 6500 3    50   Input ~ 0
+LEDDown
+Text GLabel 3700 6500 3    50   Input ~ 0
+LEDUP
+$Comp
+L Device:R R9
+U 1 1 6212102F
+P 1300 6500
+F 0 "R9" V 1093 6500 50  0000 C CNN
+F 1 "R120" V 1184 6500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 1230 6500 50  0001 C CNN
+F 3 "~" H 1300 6500 50  0001 C CNN
+F 4 "C17437" H 1300 6500 50  0001 C CNN "LCSC"
+	1    1300 6500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 62121865
+P 2750 6500
+F 0 "R10" V 2543 6500 50  0000 C CNN
+F 1 "R120" V 2634 6500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2680 6500 50  0001 C CNN
+F 3 "~" H 2750 6500 50  0001 C CNN
+F 4 "C17437" H 2750 6500 50  0001 C CNN "LCSC"
+	1    2750 6500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR02
+U 1 1 62121E71
+P 2600 6500
+F 0 "#PWR02" H 2600 6350 50  0001 C CNN
+F 1 "+3.3V" H 2615 6673 50  0000 C CNN
+F 2 "" H 2600 6500 50  0001 C CNN
+F 3 "" H 2600 6500 50  0001 C CNN
+	1    2600 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR01
+U 1 1 62122789
+P 1150 6500
+F 0 "#PWR01" H 1150 6350 50  0001 C CNN
+F 1 "+3.3V" H 1165 6673 50  0000 C CNN
+F 2 "" H 1150 6500 50  0001 C CNN
+F 3 "" H 1150 6500 50  0001 C CNN
+	1    1150 6500
+	1    0    0    -1  
+$EndComp
+Text GLabel 7650 1600 3    50   Input ~ 0
+Earth
+$Comp
+L conn:Conn_01x07_Male J4
+U 1 1 6214A367
+P 3350 4850
+F 0 "J4" V 3185 4828 50  0000 C CNN
+F 1 "Conn_01x07_Male" V 3276 4828 50  0000 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x07_P2.00mm_Vertical" H 3350 4850 50  0001 C CNN
+F 3 "~" H 3350 4850 50  0001 C CNN
+	1    3350 4850
+	0    1    1    0   
+$EndComp
+$Comp
+L conn:Conn_01x03_Male J6
+U 1 1 6214CC8C
+P 4450 5050
+F 0 "J6" V 4512 5194 50  0000 L CNN
+F 1 "Conn_01x03_Male" V 4603 5194 50  0000 L CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x03_P2.00mm_Vertical" H 4450 5050 50  0001 C CNN
+F 3 "~" H 4450 5050 50  0001 C CNN
+	1    4450 5050
+	0    1    1    0   
+$EndComp
+$Comp
+L conn:Conn_01x02_Male J5
+U 1 1 6214F2A0
+P 3600 3200
+F 0 "J5" H 3572 3082 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 3572 3173 50  0000 R CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 3600 3200 50  0001 C CNN
+F 3 "~" H 3600 3200 50  0001 C CNN
+	1    3600 3200
+	-1   0    0    1   
+$EndComp
+$Comp
+L conn:Conn_01x03_Male J7
+U 1 1 62156544
+P 5850 5100
+F 0 "J7" V 5912 5244 50  0000 L CNN
+F 1 "Conn_01x03_Male_DHT" V 6003 5244 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5850 5100 50  0001 C CNN
+F 3 "~" H 5850 5100 50  0001 C CNN
+	1    5850 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR03
+U 1 1 62156F28
+P 5750 5300
+F 0 "#PWR03" H 5750 5150 50  0001 C CNN
+F 1 "+3.3V" H 5765 5473 50  0000 C CNN
+F 2 "" H 5750 5300 50  0001 C CNN
+F 3 "" H 5750 5300 50  0001 C CNN
+	1    5750 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 62158050
+P 5950 5300
+F 0 "#PWR04" H 5950 5050 50  0001 C CNN
+F 1 "GND" H 5955 5127 50  0000 C CNN
+F 2 "" H 5950 5300 50  0001 C CNN
+F 3 "" H 5950 5300 50  0001 C CNN
+	1    5950 5300
+	1    0    0    -1  
+$EndComp
+Text GLabel 5850 5300 3    50   Input ~ 0
+DHT
+$Comp
+L conn:Conn_01x04_Female J2
+U 1 1 61F73F4C
+P 1550 850
+F 0 "J2" V 1396 998 50  0000 L CNN
+F 1 "Conn_01x04_Female_Display" V 1487 998 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 1550 850 50  0001 C CNN
+F 3 "~" H 1550 850 50  0001 C CNN
+	1    1550 850 
+	0    -1   -1   0   
+$EndComp
+Text GLabel 7150 1300 1    50   Input ~ 0
+AC_N
+Wire Wire Line
+	7150 1300 7150 1550
+Text GLabel 7850 1600 3    50   Input ~ 0
+AC_L
+$Comp
+L K6-1212A-03:K6-1212A-03 S2
+U 1 1 6210D216
+P 1450 6500
+F 0 "S2" H 2294 6596 50  0000 L CNN
+F 1 "K6-1212A-03" H 2294 6505 50  0000 L CNN
+F 2 "K61212A03" H 2100 7000 50  0001 L CNN
+F 3 "https://lcsc.com/product-detail/Tactile-Switches_Korean-Hroparts-Elec-K6-1212A-03_C124939.html" H 2100 6900 50  0001 L CNN
+F 4 "Tactile Switches SPST-NO 12.00mm x 12.00mm 7.30mm 50mA @ 12VDC Bagged RoHS" H 2100 6800 50  0001 L CNN "Description"
+F 5 "7.5" H 2100 6700 50  0001 L CNN "Height"
+F 6 "Korean Hroparts Elec" H 2100 6600 50  0001 L CNN "Manufacturer_Name"
+F 7 "K6-1212A-03" H 2100 6500 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "" H 2100 6400 50  0001 L CNN "Mouser Part Number"
+F 9 "" H 2100 6300 50  0001 L CNN "Mouser Price/Stock"
+F 10 "" H 2100 6200 50  0001 L CNN "Arrow Part Number"
+F 11 "" H 2100 6100 50  0001 L CNN "Arrow Price/Stock"
+	1    1450 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 7100 1850 7400
+Wire Wire Line
+	1850 7400 3300 7400
+Wire Wire Line
+	4400 7400 4400 5800
+Wire Wire Line
+	4400 5800 4700 5800
+Connection ~ 4700 5800
+Wire Wire Line
+	3300 7400 3300 7100
+Connection ~ 3300 7400
+Wire Wire Line
+	3300 7400 4400 7400
+$EndSCHEMATC
