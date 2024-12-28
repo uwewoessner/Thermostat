@@ -1,7 +1,7 @@
 #include "DHTesp.h" // Click here to get the library: http://librarymanager/All#DHTesp
 
 #include <FS.h>
-#include <littlefs.h>
+#include <LittleFS.h>
 DHTesp dht;
 #if defined Wohnzimmer
 #define Zimmer "wohnzimmer"
@@ -49,7 +49,7 @@ const float TemperatureOffset = -2.4;
 
 #include <ArduinoOTA.h>
 #ifdef ESP32
-#include <esp_int_wdt.h>
+//#include <esp_int_wdt.h>
 #include <esp_task_wdt.h>
 
 #include <WiFi.h>
@@ -365,10 +365,13 @@ void sendState()
   if (heating)
   {
     client.publish(Zimmer"/Thermostat/heating", "ON");
+    client.publish(Zimmer"/Thermostat/mode", "heat");
   }
   else
   {
     client.publish(Zimmer"/Thermostat/heating", "OFF");
+    if(isOn)
+    client.publish(Zimmer"/Thermostat/mode", "auto");
   }
   if (isOn)
   {
@@ -377,6 +380,7 @@ void sendState()
   else
   {
     client.publish(Zimmer"/Thermostat/isOn", "OFF");
+    client.publish(Zimmer"/Thermostat/mode", "off");
   }
 }
 
@@ -449,7 +453,7 @@ void setup()
   heating=false;
   digitalWrite(ssrPort, !heating);
 
-  ESP32Encoder::useInternalWeakPullResistors = UP;
+  ESP32Encoder::useInternalWeakPullResistors = puType::up;
 
   encoder1.attachHalfQuad(pA1, pB1);
 
@@ -531,7 +535,11 @@ void setup()
   client.setCallback(callback);
 
 #ifdef ESP32
-  esp_task_wdt_init(25, true); //socket timeout is 15seconds
+esp_task_wdt_config_t config;
+config.timeout_ms = 25;
+config.idle_core_mask = ~0;
+config.trigger_panic = true;
+  esp_task_wdt_init(&config); //socket timeout is 15seconds
   esp_task_wdt_add(nullptr);
 #endif
 
@@ -543,11 +551,11 @@ void setup()
   
     sollTemperatur = 21.5;
     isOn = true;
-    if(!LITTLEFS.begin(true)){
+    if(!LittleFS.begin(true)){
         Serial.println("LITTLEFS Mount Failed");
         return;
     }
-    File file = LITTLEFS.open("/config.txt");
+    File file = LittleFS.open("/config.txt");
     if(!file || file.isDirectory()){
         Serial.println("- failed to open file for reading");
         return;
@@ -665,7 +673,7 @@ void localLoop()
 
   if (fileChanged && (now - fileChangeTime) > 10000) // wait 10 seconds to write file after last change
   {
-    File file = LITTLEFS.open("/config.txt", "w");
+    File file = LittleFS.open("/config.txt", "w");
     if (!file || file.isDirectory())
     {
       Serial.println("- failed to open file for reading");

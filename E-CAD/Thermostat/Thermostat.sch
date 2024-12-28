@@ -40,7 +40,7 @@ F 3 "" H 4700 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L mypower:TENSTAR_3.3 U2
+L Thermostat-rescue:TENSTAR_3.3-mypower U2
 U 1 1 61F71185
 P 8500 2750
 F 0 "U2" H 8828 2671 50  0000 L CNN
@@ -72,34 +72,6 @@ F 3 "" H 8300 3500 50  0001 C CNN
 	1    8300 3500
 	-1   0    0    1   
 $EndComp
-Text GLabel 1750 1050 3    50   Input ~ 0
-SDA
-Text GLabel 1650 1050 3    50   Input ~ 0
-SCL
-$Comp
-L power:GND #PWR0105
-U 1 1 61F79E4B
-P 1450 1050
-F 0 "#PWR0105" H 1450 800 50  0001 C CNN
-F 1 "GND" H 1455 877 50  0000 C CNN
-F 2 "" H 1450 1050 50  0001 C CNN
-F 3 "" H 1450 1050 50  0001 C CNN
-	1    1450 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR0106
-U 1 1 61F7AB02
-P 1550 1300
-F 0 "#PWR0106" H 1550 1150 50  0001 C CNN
-F 1 "+3.3V" H 1565 1473 50  0000 C CNN
-F 2 "" H 1550 1300 50  0001 C CNN
-F 3 "" H 1550 1300 50  0001 C CNN
-	1    1550 1300
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1550 1300 1550 1050
 Wire Wire Line
 	4700 1550 4700 1000
 Wire Wire Line
@@ -109,7 +81,7 @@ SDA
 Text GLabel 5300 3250 2    50   Input ~ 0
 SCL
 $Comp
-L conn:Screw_Terminal_01x05 J1
+L Thermostat-rescue:Screw_Terminal_01x05-conn J1
 U 1 1 61F7C7CA
 P 7650 1400
 F 0 "J1" V 7614 1112 50  0000 R CNN
@@ -306,7 +278,7 @@ F 4 "C17710" H 6000 2050 50  0001 C CNN "LCSC"
 	0    1    1    0   
 $EndComp
 $Comp
-L conn:Conn_01x06_Female J3
+L Thermostat-rescue:Conn_01x06_Female-conn J3
 U 1 1 6200F70B
 P 2250 2250
 F 0 "J3" V 2096 2398 50  0000 L CNN
@@ -606,7 +578,7 @@ GPIO39
 Wire Wire Line
 	3600 1750 4100 1750
 $Comp
-L TS-1187A-B-A-B:TS-1187A-B-A-B S4
+L Thermostat-rescue:TS-1187A-B-A-B-TS-1187A-B-A-B S4
 U 1 1 620FAFEC
 P 5000 6200
 F 0 "S4" H 5600 6465 50  0000 C CNN
@@ -631,7 +603,7 @@ Wire Wire Line
 	5000 5800 5000 6200
 Connection ~ 5000 5800
 $Comp
-L TS-1187A-B-A-B:TS-1187A-B-A-B S5
+L Thermostat-rescue:TS-1187A-B-A-B-TS-1187A-B-A-B S5
 U 1 1 62102DD0
 P 6950 6200
 F 0 "S5" H 7550 6465 50  0000 C CNN
@@ -655,7 +627,7 @@ Wire Wire Line
 Wire Wire Line
 	5000 5800 6950 5800
 $Comp
-L CPC1972GSTR:CPC1972GSTR IC3
+L Thermostat-rescue:CPC1972GSTR-CPC1972GSTR IC3
 U 1 1 621084DD
 P 7050 4200
 F 0 "IC3" H 7800 4465 50  0000 C CNN
@@ -681,7 +653,7 @@ NoConn ~ 6200 6300
 NoConn ~ 8150 6200
 NoConn ~ 8150 6300
 $Comp
-L K6-1212A-03:K6-1212A-03 S1
+L Thermostat-rescue:K6-1212A-03-K6-1212A-03 S1
 U 1 1 6211AD27
 P 2900 6500
 F 0 "S1" H 3744 6596 50  0000 L CNN
@@ -752,7 +724,7 @@ $EndComp
 Text GLabel 7650 1600 3    50   Input ~ 0
 Earth
 $Comp
-L conn:Conn_01x07_Male J4
+L Thermostat-rescue:Conn_01x07_Male-conn J4
 U 1 1 6214A367
 P 3350 4850
 F 0 "J4" V 3185 4828 50  0000 C CNN
@@ -763,7 +735,7 @@ F 3 "~" H 3350 4850 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L conn:Conn_01x03_Male J6
+L Thermostat-rescue:Conn_01x03_Male-conn J6
 U 1 1 6214CC8C
 P 4450 5050
 F 0 "J6" V 4512 5194 50  0000 L CNN
@@ -774,7 +746,7 @@ F 3 "~" H 4450 5050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L conn:Conn_01x02_Male J5
+L Thermostat-rescue:Conn_01x02_Male-conn J5
 U 1 1 6214F2A0
 P 3600 3200
 F 0 "J5" H 3572 3082 50  0000 R CNN
@@ -785,7 +757,7 @@ F 3 "~" H 3600 3200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conn:Conn_01x03_Male J7
+L Thermostat-rescue:Conn_01x03_Male-conn J7
 U 1 1 62156544
 P 5850 5100
 F 0 "J7" V 5912 5244 50  0000 L CNN
@@ -820,7 +792,7 @@ $EndComp
 Text GLabel 5850 5300 3    50   Input ~ 0
 DHT
 $Comp
-L conn:Conn_01x04_Female J2
+L Thermostat-rescue:Conn_01x04_Female-conn J2
 U 1 1 61F73F4C
 P 1550 850
 F 0 "J2" V 1396 998 50  0000 L CNN
@@ -837,7 +809,7 @@ Wire Wire Line
 Text GLabel 7850 1600 3    50   Input ~ 0
 AC_L
 $Comp
-L K6-1212A-03:K6-1212A-03 S2
+L Thermostat-rescue:K6-1212A-03-K6-1212A-03 S2
 U 1 1 6210D216
 P 1450 6500
 F 0 "S2" H 2294 6596 50  0000 L CNN
@@ -869,4 +841,32 @@ Wire Wire Line
 Connection ~ 3300 7400
 Wire Wire Line
 	3300 7400 4400 7400
+Wire Wire Line
+	1550 1300 1550 1050
+$Comp
+L power:+3.3V #PWR0106
+U 1 1 61F7AB02
+P 1550 1300
+F 0 "#PWR0106" H 1550 1150 50  0001 C CNN
+F 1 "+3.3V" H 1565 1473 50  0000 C CNN
+F 2 "" H 1550 1300 50  0001 C CNN
+F 3 "" H 1550 1300 50  0001 C CNN
+	1    1550 1300
+	-1   0    0    1   
+$EndComp
+Text GLabel 1650 1050 3    50   Input ~ 0
+SCL
+Text GLabel 1750 1050 3    50   Input ~ 0
+SDA
+$Comp
+L power:GND #PWR0105
+U 1 1 61F79E4B
+P 1450 1050
+F 0 "#PWR0105" H 1450 800 50  0001 C CNN
+F 1 "GND" H 1455 877 50  0000 C CNN
+F 2 "" H 1450 1050 50  0001 C CNN
+F 3 "" H 1450 1050 50  0001 C CNN
+	1    1450 1050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
