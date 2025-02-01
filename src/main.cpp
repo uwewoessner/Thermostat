@@ -11,6 +11,11 @@ DHTesp dht;
 const float TemperatureOffset = -3;
 #define NewPCB
 #endif
+#if defined Buero
+#define Zimmer "Buero"
+const float TemperatureOffset = -6;
+#define NewPCB
+#endif
 #if defined Kueche
 #define Zimmer "kueche"
 const float TemperatureOffset = -2;
@@ -137,8 +142,14 @@ void DebugPrintf(const char *, ...); //Our printf function
 #endif
 char *convert(int, int); //Convert integer number into octal, hex, etc.
 
+
+#if defined Buero || defined Werkstatt
+const char *mqtt_server = "192.168.1.21";
+#include "../../../wifiPasswd.h"
+#else
 const char *mqtt_server = "192.168.178.34";
 #include "../../../wifiPasswd.h"
+#endif
 
 //WiFiServer server(80);
 WiFiClient espClient;
